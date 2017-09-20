@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算器</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #calculator {
+            margin: 20px auto;
+            width: 162px;
+            height: 250px;
+            padding-top: 10px;
+            padding-left: 10px;
+            border: 2px solid #9E9E9E;
+        }
+        #text {
+            height: 36px;
+            width: 152px;
+            margin-bottom: 13px;
+            font-size: 18px;
+            border: 2px solid #9e9e9e;
+            border-radius: 2px;
+        }
+        table {
+            border-spacing: 0;
+        }
+        button {
+            width: 36px;
+            height: 36px;
+            border: 2px solid #9E9E9E;
+            background-color: #D7CCC8;
+            margin: 1px;
+            border-radius: 2px;
+        }
+        #btn_equal {
+            width: 74px;
+            height: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="text" value="0."/>
+        <table>
+            <tr>
+                <td><button onclick="backspace()">←</button></td>
+                <td><button onclick="ce()">CE</button></td>
+                <td><button onclick="c()">C</button></td>
+                <td><button onclick="operator('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="btn(7)">7</button></td>
+                <td><button onclick="btn(8)">8</button></td>
+                <td><button onclick="btn(9)">9</button></td>
+                <td><button onclick="operator('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="btn(4)">4</button></td>
+                <td><button onclick="btn(5)">5</button></td>
+                <td><button onclick="btn(6)">6</button></td>
+                <td><button onclick="operator('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="btn(1)">1</button></td>
+                <td><button onclick="btn(2)">2</button></td>
+                <td><button onclick="btn(3)">3</button></td>
+                <td><button onclick="operator('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="btn(0)">0</button></td>
+                <td><button onclick="dot()">.</button></td>
+                <td colspan="2"><button id="btn_equal" onclick="equal()">=</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="calculator.js"></script>
+</html>
